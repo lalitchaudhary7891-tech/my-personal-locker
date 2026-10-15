@@ -1,1 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Personal Locker</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; font-family: Arial, sans-serif;
+      background: #f1f5f9; color: #172033;
+    }
+    header {
+      background: #172554; color: white;
+      padding: 24px 16px; text-align: center;
+    }
+    header h1 { margin: 0 0 8px; }
+    main { max-width: 700px; margin: 24px auto; padding: 16px; }
+    .card {
+      background: white; padding: 20px; margin-bottom: 16px;
+      border-radius: 14px; box-shadow: 0 3px 12px #0000000d;
+    }
+    .items { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .item {
+      background: #eff6ff; padding: 18px 10px; text-align: center;
+      border-radius: 12px; font-size: 17px;
+    }
+    button {
+      background: #1d4ed8; color: white; border: 0;
+      border-radius: 8px; padding: 11px 16px; cursor: pointer;
+    }
+    input, textarea {
+      width: 100%; padding: 12px; margin: 8px 0 12px;
+      border: 1px solid #cbd5e1; border-radius: 8px;
+      font: inherit;
+    }
+    textarea { min-height: 100px; }
+    footer { text-align: center; padding: 20px; color: #64748b; }
+    @media (max-width: 420px) {
+      .items { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🔐 My Personal Locker</h1>
+    <p>Your personal space for notes and reminders</p>
+  </header>
 
+  <main>
+    <section class="card">
+      <h2>Welcome!</h2>
+      <p>This is your Personal Locker website.</p>
+      <div class="items">
+        <div class="item">📇<br><strong>Contacts</strong></div>
+        <div class="item">📝<br><strong>Notes</strong></div>
+        <div class="item">📁<br><strong>Documents</strong></div>
+        <div class="item">👨‍👩‍👧‍👦<br><strong>Family Locker</strong></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Quick Note</h2>
+      <p>This demo lets you type a note, but it does not securely save it.</p>
+      <textarea id="note" placeholder="Write a note here..."></textarea>
+      <button onclick="document.getElementById('note').value=''">
+        Clear Note
+      </button>
+    </section>
+
+    <section class="card">
+      <h2>Family & Refer</h2>
+      <p>Family sharing and referral rewards will be added in a later step.</p>
+    </section>
+  </main>
+
+  <footer>My Personal Locker · Website Preview</footer>
+</body>
+</html>
